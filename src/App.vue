@@ -12,16 +12,10 @@
 </template>
 
 <style scoped>
-.navbutton {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-</style>
-
-<style>
-.center {
-  text-align: center;
-}
+  .navbutton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 </style>
