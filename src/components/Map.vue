@@ -5,7 +5,7 @@
       :center   = "center"
       :zoom     = "15"
       :options  = "mapOptions"
-      style = "position: absolute; width:100%;  height:100%;"
+      :style    = "mapStyle"
     >
       <gmap-marker
         v-for = "(m, index) in markers"
@@ -17,7 +17,12 @@
     </gmap-map>
 
     <PopularEventsWindow
-      :events="events"
+      v-if    = "loaded"
+      :events = "events"
+    />
+
+    <SearchBar
+      v-if    = "loaded"
     />
 
   </div>
@@ -29,17 +34,21 @@
 
   import mapStyle from '@/assets/styles/mapStyle'
   import PopularEventsWindow from '@/components/ui/popularEventsWindow'
+  import SearchBar from '@/components/ui/searchBar'
 
   export default {
     name: 'gmap',
     components: {
-      PopularEventsWindow
+      PopularEventsWindow,
+      SearchBar
     },
     data() {
       return {
+      // MAP SETTINGS (move to JSON?)
         // Defaults Center to UBC
         center:       { lat: 49.261, lng: -123.25 },
         mapTypeId:    "terrain",
+        mapStyle:     "position: absolute; width:100%;  height:100%;",
 
         mapOptions:   {
           // CUSTOM FUNCTIONAL CONTROLS
@@ -63,7 +72,11 @@
           draggingCursor:    '',
         },
 
-        mapStyle:     "position: absolute; width:100%;  height:100%;",
+      // Boolean whether map is loaded
+        loaded: false,
+
+      // Google API Data
+
         markers:      [],
         places:       [],
         currentPlace: null,
@@ -76,6 +89,7 @@
       // Wait for google maps API to load
       this.$gmapApiPromiseLazy().then(() => {
         console.log("Map Loaded!");
+        this.loaded = true;
         // Automatically try to determine user location on mount
         // this.geolocate();
       })

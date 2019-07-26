@@ -26,9 +26,5 @@
     props: {
       eventInfo: Object
     },
-
-    mounted() {
-      console.log(this.eventInfo);
-    }
   }
 </script>
