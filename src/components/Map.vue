@@ -1,10 +1,9 @@
 <template>
   <div>
-    <h1 class="center">Welcome to the App!</h1><br/>
     <gmap-map
       :center = "center"
       :zoom   = "14"
-      style   = "width:100%;  height:600px;"
+      style   = "position: absolute; width:100%;  height:100%;"
     >
       <gmap-marker
         v-for = "(m, index) in markers"

@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <GoogleMap />
+    <!-- Navbar -->
+    <router-view/>
+    <br/>
+    <div id="nav">
+      <b-button variant="primary" class="navbutton" href="/">Landing Page</b-button>
+      <b-button variant="primary" class="navbutton" href="/signin">Sign In</b-button>
+      <b-button variant="primary" class="navbutton" href="/signup">Sign Up</b-button>
+    </div>
   </div>
 </template>
 
-<script>
-import GoogleMap from "./components/Map";
+<style scoped>
+.navbutton {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+</style>
 
-export default {
-  name: "App",
-  components: {
-    GoogleMap
-  }
-};
-</script>
+<style>
+.center {
+  text-align: center;
+}
+</style>
