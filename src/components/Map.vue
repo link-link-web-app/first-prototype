@@ -1,41 +1,73 @@
 <template>
   <div>
     <gmap-map
-      :center = "center"
-      :zoom   = "14"
-      style   = "position: absolute; width:100%;  height:100%;"
+      ref       = "gmap"
+      :center   = "center"
+      :zoom     = "15"
+      :options  = "mapOptions"
+      style = "position: absolute; width:100%;  height:100%;"
     >
       <gmap-marker
         v-for = "(m, index) in markers"
 
         :key        = "index"
         :position   = "m.position"
-        :clickable  = "true"
-        :draggable  = "true"
         @click      = "center=m.position"
       ></gmap-marker>
     </gmap-map>
   </div>
 </template>
 
-
 <script>
+import mapStyle from '@/assets/styles/mapStyle'
+
 export default {
   data() {
     return {
-      // Defaults to UBC
-      // Need to find a way to limit this range
+      // Defaults Center to UBC
       center:       { lat: 49.261, lng: -123.25 },
       mapTypeId:    "terrain",
+      mapOptions:   {
+        // CUSTOM FUNCTIONAL CONTROLS
+        disableDefaultUI:   true,
+        keyboardShortcuts:  false,
+        clickableIcons:     true,
+
+        // CUSTOM VIEW CONTROLS
+        minZoom: 14,
+        restriction: {
+          latLngBounds: {
+            north: 49.312836,
+            south: 49.198554,
+            west: -123.298689,
+            east: -123.094845
+          },
+          strictBounds: true,
+        },
+
+        // FURTHER DESIGN CUSTOMIZATIONS
+        styles: mapStyle,
+        draggableCursor:  '',
+        draggingCursor:    '',
+
+      },
+      mapStyle:     "position: absolute; width:100%;  height:100%;",
       markers:      [],
       places:       [],
-      currentPlace: null
+      currentPlace: null,
+
     };
   },
 
-  // Automatically try to determine user location on mount
   mounted() {
-    this.geolocate();
+    // Wait for google maps API to load
+    this.$gmapApiPromiseLazy().then(() => {
+      // Automatically try to determine user location on mount
+      this.geolocate();
+      console.log("Map Loaded!");
+    })
+
+    console.log(this.mapStyle);
   },
 
   methods: {
@@ -50,9 +82,3 @@ export default {
   }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<!-- Need to implement bootstrap vue for further designing -->
-<style scoped>
-.center { text-align: center }
-</style>

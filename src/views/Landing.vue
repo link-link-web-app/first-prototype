@@ -2,9 +2,9 @@
 
 <template>
   <div >
-    <br/>
-    <h4 class="center">Welcome to the Landing Page!</h4>
-    <br/>
+    <div class="title-container">
+      <div class="vh-center"><h5>Welcome to the Landing Page!</h5></div>
+    </div>
     <div class="map-container">
       <GoogleMap />
     </div>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import GoogleMap from "../components/Map";
+import GoogleMap from "@/components/Map";
 
 export default {
   name: "Landing",
