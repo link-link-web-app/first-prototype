@@ -3,11 +3,11 @@
     <!-- Navbar -->
     <router-view/>
     <br/>
-    <div id="nav">
+    <!-- <div id="nav">
       <b-button variant="primary" class="navbutton" href="/">Landing Page</b-button>
       <b-button variant="primary" class="navbutton" href="/signin">Sign In</b-button>
       <b-button variant="primary" class="navbutton" href="/signup">Sign Up</b-button>
-    </div>
+    </div> -->
   </div>
 </template>
 
