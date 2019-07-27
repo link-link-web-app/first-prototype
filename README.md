@@ -8,11 +8,25 @@ https://github.com/link-link-webapp
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Deployment
+1. Fork this repository
 
-Vue provides a user interface (BETA) that allows deploying the project on an optionally specified port on *localhost:PORT_NUM*. Otherwise, locally run the app by the following vue commands:
+2. Clone the remote epository into a local environment
+
+3. [Install all dependencies](#dependency)
+
+4. Ensure the Google Maps API is functional
+
+5. Deploy app on localhost
+
+Vue provides a user interface (BETA) that allows deploying the project on an optionally specified port on *localhost:PORT_NUM*. The Vue UI can be accessed by running the command below on the project root:
+
+```
+vue ui
+```
+
+Otherwise, locally run the app by the following vue commands:
 
 #### Compile the vue application with hot reloading
 
@@ -69,7 +83,7 @@ The project currently requires the following packages as dependencies in order t
 
 The project uses [sass-loader](https://vue-loader.vuejs.org/guide/pre-processors.html#sass) to compile SASS [node](https://github.com/sass/node-sass) files into readable CSS
 
-To install all the dependencies, simply clone the project and run the following command in the project root folder. 
+<a name="dependency"></a>To install all the dependencies, simply clone the project and run the following command in the project root folder. 
 
 ```
 npm install
@@ -77,6 +91,13 @@ npm install
 
 End with an example of getting some data out of the system or using it for a little demo
 
+- - - -
+
+## Google Cloud Platform
+
+Currently, as part of the development stage, the app is running using a public API Key with specific quotas set to prevent too many requests being made to the Google API Services allowed. Therefore, the dotenv (~/.env) environmental variables file is committed into this repository to support ease of contribution by members of the team. In order to obtain a new private API key, feel free to follow the instructions posted on the Original [Google Cloud Platform Documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
+
+- - - -
 
 ## Contributing
 
