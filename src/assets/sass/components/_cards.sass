@@ -17,3 +17,36 @@
 
 .eventCard_text
   font-size: $small-card-font
+
+
+.explore-window
+  bottom: 0
+  position: fixed
+  width: 100%
+  .explore-window__block
+    height: 10vh
+    width: 100%
+    background: $white
+  .explore-window__button
+    bottom: 10vh
+    display: flex
+    flex-direction: column
+    left: 50%
+    position: absolute
+    transform: translate(-50%, 50%)
+    transform-origin: bottom center
+    .explore-window__button-icon
+      width: 7em
+      height: 7em
+      cursor: pointer
+      g circle
+        fill: $blue
+        fill-opacity: 0.7
+        transition: all 0.5s
+      &:hover
+        g circle
+          fill-opacity: 1
+    .explore-window__button-text
+      padding-left: 1em
+      padding-bottom: 1em
+      width: 6em
