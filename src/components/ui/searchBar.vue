@@ -1,6 +1,9 @@
 <template>
   <div class="search-window">
     <div class="search-window__bar">
+      <div class="search-container">
+        <img src="../../assets/icons/search.png" alt="">
+      </div>
       <input
         ref="autocomplete"
         v-model="searchQuery"
