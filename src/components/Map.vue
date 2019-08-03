@@ -12,6 +12,7 @@
 
         :key        = "index"
         :position   = "m.position"
+        :icon       = "pin"
         @click      = "center=m.position"
       ></gmap-marker>
     </gmap-map>
@@ -37,6 +38,8 @@
   import events from '@/assets/eventData'
 
   import mapStyle from '@/assets/styles/mapStyle'
+  import mapMarker from '@/assets/icons/pin.svg'
+
   import ExploreWindow from '@/components/ui/exploreWindow'
   import PopularEventsWindow from '@/components/ui/popularEventsWindow'
   import SearchBar from '@/components/ui/searchBar'
@@ -78,12 +81,23 @@
           draggingCursor:    '',
         },
 
+        pin: {
+          url: mapMarker,
+          size: {width: 40, height: 40, f: 'px', b: 'px',},
+          scaledSize: {width: 40, height: 40, f: 'px', b: 'px',}
+        },
+
       // Boolean whether map is loaded
         loaded: false,
 
       // Google API Data
 
-        markers:      [],
+        // Markers take in an object { lat lng }
+        markers:      [
+          {
+            position: { lat: 49.261, lng: -123.25 }
+          }
+        ],
         places:       [],
         currentPlace: null,
 
