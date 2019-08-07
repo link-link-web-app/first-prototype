@@ -1,0 +1,19 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "description": "allow pull requests to generate apps",
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "first-prototype",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}

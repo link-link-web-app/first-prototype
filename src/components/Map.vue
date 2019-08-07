@@ -26,6 +26,10 @@
       v-if    = "loaded"
     />
 
+    <ExploreWindow
+      v-if    = "loaded"
+    />
+
   </div>
 </template>
 
@@ -34,13 +38,16 @@
   import events from '@/assets/eventData'
 
   import mapStyle from '@/assets/styles/mapStyle'
+  import mapMarker from '@/assets/icons/pin.svg'
+
+  import ExploreWindow from '@/components/ui/exploreWindow'
   import PopularEventsWindow from '@/components/ui/popularEventsWindow'
   import SearchBar from '@/components/ui/searchBar'
-  import mapMarker from '@/assets/icons/pin.svg'
 
   export default {
     name: 'gmap',
     components: {
+      ExploreWindow,
       PopularEventsWindow,
       SearchBar
     },
