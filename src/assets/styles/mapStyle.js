@@ -28,7 +28,7 @@ export default [
     "featureType": "landscape",
     "stylers": [
       {
-        "saturation": -100
+        "saturation": 0
       },
       {
         "lightness": 65
@@ -132,10 +132,10 @@ export default [
     "elementType": "geometry",
     "stylers": [
       {
-        "hue": "#ffff00"
+        "hue": "cyan"
       },
       {
-        "saturation": -97
+        "saturation": 0
       },
       {
         "lightness": -25
