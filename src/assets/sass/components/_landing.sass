@@ -66,15 +66,32 @@ $map-size: 100%
   padding: $card-width / 25
   .card-title
     font-family: $josefin
-    font-size: $large-card-font * 0.8
+    font-size: $font-size-title * 0.9
     font-weight: bold
     font-style: normal
     letter-spacing: -0.0375em
     margin-bottom: $large-card-font / 10
+  .eventCard_location
+    display: flex
+    flex-direction: row
+    align-items: center
+    .location-icon
+      width: 15px
+      height: 18px
+      float: left
+    .eventCard_locationText
+      float: right
+      margin: 0.25em 0 0 1em
+      font-family: $montserrat
+      font-size: $font-size-tiny
+      font-weight: 500
+      line-height: $font-size-small
+      color: $grey
   .card-title--large
     font-size: $large-card-font
     font-weight: bold
     font-style: normal
+    font-family: $montserrat
   .card
     max-width: $card-width
     max-height: $card-height
