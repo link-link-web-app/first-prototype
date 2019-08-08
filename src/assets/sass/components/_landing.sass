@@ -94,11 +94,11 @@ $map-size: 100%
   position: fixed
   width: 100%
   .explore-window__block
-    height: 10vh
+    height: 8vh
     width: 100%
     background: $white
   .explore-window__button
-    bottom: 10vh
+    bottom: 8vh
     display: flex
     flex-direction: column
     left: 50%
@@ -111,8 +111,8 @@ $map-size: 100%
       cursor: pointer
       g circle
         fill: $blue
-        fill-opacity: 0.6
-        transition: all 0.2s
+        fill-opacity: 0.8
+        transition: all 0.3s
       &:hover
         g circle
           fill-opacity: 1
@@ -120,3 +120,10 @@ $map-size: 100%
       padding-left: 1em
       padding-bottom: 1em
       width: 6em
+    #explore-text
+      color: $blue
+      font-family: $montserrat
+      margin: 0 auto 0.5em
+      font-weight: 600
+      font-size: $font-size-normal
+      letter-spacing: 0.2em
