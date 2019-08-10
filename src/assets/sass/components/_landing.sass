@@ -2,6 +2,17 @@
 
 $map-size: 100%
 
+// APPLIES TO ALL
+.badge
+  text-transform: uppercase
+  color: $blue
+  font-size: 0.6rem
+  margin-left: 0.2rem
+  margin-right: 0.2rem
+  padding-left: 0.5rem
+  padding-right: 0.5rem
+  user-select: none
+
 .map-container
   position: absolute
   width: 100vw
@@ -62,15 +73,20 @@ $map-size: 100%
   .search-window__dropdown
     margin-top: 0
 
+// Cards
+
 .eventCard
   padding: $card-width / 25
   .card-title
+    cursor: pointer
     font-family: $josefin
-    font-size: $font-size-title * 0.9
+    font-size: $font-size-title * 0.8
     font-weight: bold
     font-style: normal
     letter-spacing: -0.0375em
     margin-bottom: $large-card-font / 10
+    &:hover
+      transform: scale(1.05)
   .eventCard_location
     display: flex
     flex-direction: row
@@ -101,10 +117,71 @@ $map-size: 100%
   .eventCard_text
     font-size: $small-card-font
   .card-body
-    padding-top: $large-card-font
+    padding-top: $small-card-font / 2
     padding-bottom: $large-card-font
     padding-left: $card-width / 25
     padding-right: $card-width / 25
+
+.eventCard--detailed
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  height: 100%
+  width: 100%
+  .card
+    width: 30vw
+    // width definitely needs responsiveness here
+    height: 80vh
+    border-radius: 2%
+    .card-img-top
+      object-fit: cover
+      object-position: 50% 0
+      min-height: 70%
+      filter: grayscale(20%) opacity(90%)
+      border-radius: 2%
+      // can play around with filters here
+    .card-body
+      padding: 2rem
+      position: relative
+      top: -35%
+      background-image: linear-gradient(rgba(0,0,0,0), black 70%)
+      .img-display
+        text-align: right
+        filter: contrast(150%)
+        img, .img-add
+          cursor: pointer
+          object-fit: cover
+          width: 2.5rem
+          height: 2.5rem
+          margin: 0.3rem
+          border-radius: 20%
+          background: $blue
+          display: inline-block
+          vertical-align: middle
+          text-align: center
+          line-height: 2.5rem
+          &:hover
+            transform: scale(1.1)
+
+      .eventCard_location
+        display: flex
+        flex-direction: row
+        align-items: center
+        .location-icon
+          width: 15px
+          height: 18px
+          float: left
+        .eventCard_locationText
+          float: right
+          margin: 0.25em 0 0 1em
+          font-family: $montserrat
+          font-size: $font-size-tiny
+          font-weight: 500
+          line-height: $font-size-small
+          color: $grey
+
+// Explore
 
 .explore-window
   bottom: 0

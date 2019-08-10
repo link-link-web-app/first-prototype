@@ -1,9 +1,15 @@
 <template>
   <div class="popular-window">
-    <div class="eventCard"><span class="card-title--large">&nbspEvents Nearby</span></div>
+    <div class="eventCard "><span class="card-title--large">&nbspEvents Nearby</span></div>
     <div class="popular-window__container">
-      <EventCard :eventInfo="events[0]" />
-      <EventCard :eventInfo="events[2]" />
+      <EventCard
+        :eventInfo  = "events[0]"
+        @openCard   = "openCard"
+      />
+      <EventCard
+        :eventInfo  = "events[2]"
+        @openCard   = "openCard"
+      />
     </div>
   </div>
 </template>
@@ -17,6 +23,11 @@
     },
     props: {
       events: Array
+    },
+    methods: {
+      openCard(id) {
+        this.$emit('openCard', id)
+      }
     }
   }
 </script>

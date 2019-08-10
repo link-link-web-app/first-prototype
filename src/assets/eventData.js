@@ -11,7 +11,7 @@ export default [
       admin: "Killy Bong"
     },
     priv: {
-      id: 420,
+      id: 0,
       adminId: 1,
       dateCreated: "07/29/2019",
       lastUpdate: "07/29/2019",
@@ -107,7 +107,7 @@ export default [
       admin: "Kelvin Muk"
     },
     priv: {
-      id: 69,
+      id: 1,
       adminId: 19356,
       dateCreated: "07/29/2019",
       lastUpdate: "07/29/2019",
@@ -158,7 +158,7 @@ export default [
       admin: "High Bong"
     },
     priv: {
-      id: 123,
+      id: 2,
       adminId: 823132,
       dateCreated: "07/29/2019",
       lastUpdate: "07/29/2019",
