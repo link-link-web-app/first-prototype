@@ -5,7 +5,7 @@ Please also include a list of any dependencies that are required for this change
 
 Fixes # (issue)
 
-## Type of change
+## Type of Change
 
 Please delete options that are not relevant.
 
@@ -25,7 +25,7 @@ Please describe the tests that you ran to verify your changes. If design change,
 
 - [ ] Code follows the project's style guidelines
 - [ ] I have performed a self-review of the Code being pushed
-- [ ] Code has been reviewed by at least one other deve;
+- [ ] Code has been reviewed by at least one other developer
 - [ ] Code has appropriate commenting, particularly in hard-to-understand areas
 - [ ] Corresponding changes to the documentation have been made
 - [ ] The changes generate no new warnings
