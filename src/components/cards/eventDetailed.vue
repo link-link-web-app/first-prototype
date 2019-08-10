@@ -31,10 +31,17 @@
         <h4 class="card-title">{{ eventInfo.pub.name }}</h4>
         <div class="card-location">
           <img src="../../assets/icons/location.png" alt="" class="location-icon">
-          <p class="eventCard_locationText">{{ eventInfo.pub.venue }}</p>
+          <p class="card-location-text">{{ eventInfo.pub.venue }}</p>
         </div>
         <br />
-        <div card-body-description>{{ eventInfo.pub.time }}, {{ eventInfo.pub.date }}</div>
+        <div class="card-body-description">
+          <h5>OVERVIEW</h5>
+          <div class="">
+            <p v-if="snipped"> {{ eventInfo.pub.description | snippet }}</p>
+            <p v-else> {{ eventInfo.pub.description }}</p>
+          </div>
+          <p class="card-body-description-rm" @click="snipped = false" v-show="snipped">Read More</p>
+        </div>
         <div>{{ }}</div>
       </b-card-text>
 
@@ -50,12 +57,35 @@
 
 <script>
   export default {
+    data() {
+      return {
+        snipped: true,
+      }
+    },
+
     name: "eventDetailedDisplay",
     props: {
       eventInfo: Object
     },
+
     trigger: function() {
       this.$emit('trigger');
+    },
+
+    filters: {
+      snippet(value){
+        if (value.length > 200) {
+          return value.slice(0, 200) + '...';
+          this.snipped = true;
+        } else {
+          this.snipped = false;
+        }
+      }
+    },
+    methods: {
+    },
+    computed: {
+
     }
   }
 </script>

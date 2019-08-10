@@ -4,9 +4,9 @@ $map-size: 100%
 
 // APPLIES TO ALL
 .badge
+  font-family: $montserrat
   text-transform: uppercase
-  font-weight: 700
-  letter-spacing: 0.075em
+  font-weight: 600
   line-height: 1em
   font-style: normal
   color: $blue
@@ -148,6 +148,7 @@ $map-size: 100%
       border-radius: 2%
       // can play around with filters here
     .card-body
+      font-family: $montserrat
       padding: 2rem
       position: relative
       top: -35%
@@ -184,7 +185,7 @@ $map-size: 100%
           width: 15px
           height: 18px
           float: left
-        .eventCard_locationText
+        .card-location-text
           float: right
           margin: 0.125em 0 0 1em
           font-family: $montserrat
@@ -192,6 +193,26 @@ $map-size: 100%
           font-weight: 500
           line-height: $font-size-small
           color: $blue-grey
+      .card-body-description
+        font-family: $montserrat
+        h5
+          color: $blue-grey
+          font-size: $font-size-small
+          letter-spacing: 0.1em
+          font-weight: 600
+        p
+          color: $blue-grey
+          font-size: $font-size-small
+          line-height: $font-size-small * 2
+          font-weight: normal
+          margin-bottom: 0.5em
+        .card-body-description-rm
+          color: $blue
+          font-weight: 600
+          cursor: pointer
+
+
+
 
 // Explore
 
