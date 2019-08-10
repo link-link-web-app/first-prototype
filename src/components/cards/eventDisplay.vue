@@ -1,12 +1,19 @@
 <template>
-  <div class="eventCard">
+  <div class="eventCard mb-2">
     <b-card
-      :title="eventInfo.pub.name"
       :img-src="eventInfo.mediaLink.cover"
       :img-alt="eventInfo.mediaLink.host[0]"
       img-top
     >
+      <div class="badge-display mb-2">
+        <b-badge pill variant="light">{{ eventInfo.eventTags.host[0] }}</b-badge>
+        <b-badge pill variant="light">{{ eventInfo.eventTags.host[1] }}</b-badge>
+      </div>
       <b-card-text>
+        <h4
+          class   = "card-title"
+          @click  = "openCard"
+        >{{ eventInfo.pub.name }}</h4>
         <!-- <div class="eventCard_text">
           {{ eventInfo.pub.time }}, {{ eventInfo.pub.date }}
         </div>
@@ -30,5 +37,10 @@
     props: {
       eventInfo: Object
     },
+    methods: {
+      openCard() {
+        this.$emit('openCard', this.eventInfo.priv.id)
+      }
+    }
   }
 </script>

@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <div
+    class   = "map-wrapper"
+  >
     <gmap-map
       ref       = "gmap"
+      :class    = "{modalOpen: modalOpen}"
       :center   = "center"
       :zoom     = "15"
       :options  = "mapOptions"
@@ -18,17 +21,35 @@
     </gmap-map>
 
     <PopularEventsWindow
-      v-if    = "loaded"
-      :events = "events"
+      :class    = "{modalOpen: modalOpen}"
+      v-if      = "loaded"
+      :events   = "events"
+      @openCard = "openCard"
     />
 
     <SearchBar
+      :class    = "{modalOpen: modalOpen}"
       v-if    = "loaded"
     />
 
     <ExploreWindow
+      :class    = "{modalOpen: modalOpen}"
       v-if    = "loaded"
     />
+
+    <div
+      v-if  = "loaded && modalOpen"
+      class = "eventCard--detailed"
+    >
+      <div
+        class   = "background-blur"
+        @click  = "triggerModal"
+      ></div>
+      <EventDetailed
+      :eventInfo  = "events[modalFocus]"
+      @trigger    = "triggerModal"
+      />
+    </div>
 
   </div>
 </template>
@@ -44,12 +65,15 @@
   import PopularEventsWindow from '@/components/ui/popularEventsWindow'
   import SearchBar from '@/components/ui/searchBar'
 
+  import EventDetailed from '@/components/cards/eventDetailed'
+
   export default {
     name: 'gmap',
     components: {
       ExploreWindow,
       PopularEventsWindow,
-      SearchBar
+      SearchBar,
+      EventDetailed,
     },
     data() {
       return {
@@ -90,6 +114,10 @@
       // Boolean whether map is loaded
         loaded: false,
 
+      // Map state
+        modalOpen: false,
+        modalFocus: 0,
+
       // Google API Data
 
         // Markers take in an object { lat lng }
@@ -123,7 +151,28 @@
             lng: position.coords.longitude
           };
         });
+      },
+      triggerModal: function() {
+        this.modalOpen = !this.modalOpen;
+      },
+      openCard: function(id) {
+        this.triggerModal();
+        this.modalFocus = id;
       }
-    }
+    },
   };
 </script>
+
+<style lang="sass" scoped>
+  .modalOpen
+    filter: blur(2px)
+
+  .background-blur
+    background: #fff
+    opacity: 0.5
+    filter: blur(1px)
+    position: absolute
+    height: 100%
+    width: 100%
+
+</style>
