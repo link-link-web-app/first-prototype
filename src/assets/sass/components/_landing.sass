@@ -1,19 +1,19 @@
 @import '../master'
 
-$map-size: 100%;
+$map-size: 100%
 
 .map-container
-  position: absolute;
-  width: 100vw;
-  height: $map-size;
+  position: absolute
+  width: 100vw
+  height: $map-size
   min-height: $card-height * 2
-  top: 100% - $map-size;
+  top: 100% - $map-size
 
 .title-container
-  position: absolute;
-  width: 100vw;
-  height: 100% - $map-size;
-  top: 0;
+  position: absolute
+  width: 100vw
+  height: 100% - $map-size
+  top: 0
 
 // Windows and Widgets
 
@@ -22,7 +22,6 @@ $map-size: 100%;
   margin: $card-width / 8
   margin-top: $card-height / 10
   width: $card-width + 1vw
-
   .popular-window__container
     background: $white
     border-radius: 0.5em
@@ -67,15 +66,32 @@ $map-size: 100%;
   padding: $card-width / 25
   .card-title
     font-family: $josefin
-    font-size: $large-card-font * 0.8
+    font-size: $font-size-title * 0.9
     font-weight: bold
     font-style: normal
     letter-spacing: -0.0375em
     margin-bottom: $large-card-font / 10
+  .eventCard_location
+    display: flex
+    flex-direction: row
+    align-items: center
+    .location-icon
+      width: 15px
+      height: 18px
+      float: left
+    .eventCard_locationText
+      float: right
+      margin: 0.25em 0 0 1em
+      font-family: $montserrat
+      font-size: $font-size-tiny
+      font-weight: 500
+      line-height: $font-size-small
+      color: $grey
   .card-title--large
     font-size: $large-card-font
     font-weight: bold
     font-style: normal
+    font-family: $montserrat
   .card
     max-width: $card-width
     max-height: $card-height
@@ -95,11 +111,11 @@ $map-size: 100%;
   position: fixed
   width: 100%
   .explore-window__block
-    height: 10vh
+    height: 8vh
     width: 100%
     background: $white
   .explore-window__button
-    bottom: 10vh
+    bottom: 8vh
     display: flex
     flex-direction: column
     left: 50%
@@ -112,8 +128,8 @@ $map-size: 100%;
       cursor: pointer
       g circle
         fill: $blue
-        fill-opacity: 0.6
-        transition: all 0.2s
+        fill-opacity: 0.8
+        transition: all 0.3s
       &:hover
         g circle
           fill-opacity: 1
@@ -121,3 +137,10 @@ $map-size: 100%;
       padding-left: 1em
       padding-bottom: 1em
       width: 6em
+    #explore-text
+      color: $blue
+      font-family: $montserrat
+      margin: 0 auto 0.5em
+      font-weight: 600
+      font-size: $font-size-normal
+      letter-spacing: 0.2em

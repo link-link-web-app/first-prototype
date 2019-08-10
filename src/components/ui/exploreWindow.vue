@@ -1,7 +1,8 @@
 <template>
   <div class="explore-window">
     <div class="explore-window__button">
-      <Explore />
+      <!-- <Explore /> -->
+      <h3 id="explore-text">EXPLORE</h3>
       <Eclipse />
     </div>
     <div class="explore-window__block"></div>
