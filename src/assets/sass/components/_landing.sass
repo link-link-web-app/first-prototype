@@ -5,14 +5,18 @@ $map-size: 100%
 // APPLIES TO ALL
 .badge
   text-transform: uppercase
+  font-weight: 700
+  letter-spacing: 0.075em
+  line-height: 1em
+  font-style: normal
   color: $blue
-  font-size: 0.6rem
-  margin-left: 0.2rem
-  margin-right: 0.2rem
-  padding-left: 0.5rem
-  padding-right: 0.5rem
+  font-size: 0.8em
+  margin: 0 1.5rem 0 0
+  padding: 0.3em 1em
   user-select: none
-
+.badge-pill
+  border-radius: 0.625em
+  border-bottom-left-radius: 0
 .map-container
   position: absolute
   width: 100vw
@@ -99,10 +103,10 @@ $map-size: 100%
       float: right
       margin: 0.25em 0 0 1em
       font-family: $montserrat
-      font-size: $font-size-tiny
+      font-size: $font-size-small
       font-weight: 500
       line-height: $font-size-small
-      color: $grey
+      color: $blue-grey
   .card-title--large
     font-size: $large-card-font
     font-weight: bold
@@ -121,6 +125,8 @@ $map-size: 100%
     padding-bottom: $large-card-font
     padding-left: $card-width / 25
     padding-right: $card-width / 25
+
+// eventCard in the popup window
 
 .eventCard--detailed
   display: flex
@@ -148,7 +154,7 @@ $map-size: 100%
       background-image: linear-gradient(rgba(0,0,0,0), black 70%)
       .img-display
         text-align: right
-        filter: contrast(150%)
+        filter: contrast(100%)
         img, .img-add
           cursor: pointer
           object-fit: cover
@@ -163,8 +169,14 @@ $map-size: 100%
           line-height: 2.5rem
           &:hover
             transform: scale(1.1)
-
-      .eventCard_location
+      .card-title
+        font-family: $josefin
+        font-size: 2.250em
+        font-weight: bold
+        font-style: normal
+        letter-spacing: -0.05em
+        margin: 0.5em 0 0.25em
+      .card-location
         display: flex
         flex-direction: row
         align-items: center
@@ -174,12 +186,12 @@ $map-size: 100%
           float: left
         .eventCard_locationText
           float: right
-          margin: 0.25em 0 0 1em
+          margin: 0.125em 0 0 1em
           font-family: $montserrat
-          font-size: $font-size-tiny
+          font-size: $font-size-small
           font-weight: 500
           line-height: $font-size-small
-          color: $grey
+          color: $blue-grey
 
 // Explore
 

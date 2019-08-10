@@ -29,12 +29,12 @@
       </div>
       <b-card-text>
         <h4 class="card-title">{{ eventInfo.pub.name }}</h4>
-        <div class="eventCard_location">
+        <div class="card-location">
           <img src="../../assets/icons/location.png" alt="" class="location-icon">
           <p class="eventCard_locationText">{{ eventInfo.pub.venue }}</p>
         </div>
         <br />
-        <div>{{ eventInfo.pub.time }}, {{ eventInfo.pub.date }}</div>
+        <div card-body-description>{{ eventInfo.pub.time }}, {{ eventInfo.pub.date }}</div>
         <div>{{ }}</div>
       </b-card-text>
 
