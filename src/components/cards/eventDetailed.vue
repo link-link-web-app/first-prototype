@@ -29,12 +29,31 @@
       </div>
       <b-card-text>
         <h4 class="card-title">{{ eventInfo.pub.name }}</h4>
-        <div class="eventCard_location">
+        <div class="card-location">
           <img src="../../assets/icons/location.png" alt="" class="location-icon">
-          <p class="eventCard_locationText">{{ eventInfo.pub.venue }}</p>
+          <p class="card-location-text">{{ eventInfo.pub.venue }}</p>
         </div>
-        <br />
-        <div>{{ eventInfo.pub.time }}, {{ eventInfo.pub.date }}</div>
+        <div class="card-body-rating">
+          <ul>
+            <li v-for="n in eventInfo.pub.rating">
+              <img src="../../assets/icons/star.png" alt="">
+            </li>
+            <li v-for="n in (5 - eventInfo.pub.rating)">
+              <img src="../../assets/icons/star-hollow.png" alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="card-body-description">
+          <h5>OVERVIEW</h5>
+          <div class="card-body-time">
+            <p> {{ eventInfo.pub.date }}, {{ eventInfo.pub.time }}</p>
+          </div>
+          <div class="card-body-overview">
+            <p v-if="snipped"> {{ eventInfo.pub.description | snippet }}</p>
+            <p v-else> {{ eventInfo.pub.description }}</p>
+          </div>
+          <p class="card-body-description-rm" @click="snipped = false" v-show="snipped">Read More</p>
+        </div>
         <div>{{ }}</div>
       </b-card-text>
 
@@ -50,12 +69,35 @@
 
 <script>
   export default {
+    data() {
+      return {
+        snipped: true,
+      }
+    },
+
     name: "eventDetailedDisplay",
     props: {
       eventInfo: Object
     },
+
     trigger: function() {
       this.$emit('trigger');
+    },
+
+    filters: {
+      snippet(value){
+        if (value.length > 200) {
+          return value.slice(0, 200) + '...';
+          this.snipped = true;
+        } else {
+          this.snipped = false;
+        }
+      }
+    },
+    methods: {
+    },
+    computed: {
+
     }
   }
 </script>
