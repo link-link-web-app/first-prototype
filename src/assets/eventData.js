@@ -4,12 +4,13 @@ export default [
   {
     pub: {
       name: "DJ Khaled @ Celebrities",
-      time: "19:00",
-      date: "12/21/2019",
+      time: "7:00 PM PST",
+      date: "12 Dec 2019",
       venue: "Celebrities Nightclub",
       price: "$15",
       admin: "Killy Bong",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      rating: 4,
     },
     priv: {
       id: 0,
@@ -82,7 +83,7 @@ export default [
       host: [
         'party',
         'nightlife',
-        'fun',
+        '19+',
         'birthday',
         'weekend'
       ],
@@ -101,11 +102,13 @@ export default [
   {
     pub: {
       name: "Kelvin's Bday Bash",
-      time: "23:00",
-      date: "09/09/2019",
+      time: "11:00 PM PST",
+      date: "9 Sep 2019",
       venue: "Marine Drive",
       price: "",
-      admin: "Kelvin Muk"
+      admin: "Kelvin Muk",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      rating: 4,
     },
     priv: {
       id: 1,
@@ -152,11 +155,13 @@ export default [
   {
     pub: {
       name: "Alwin's Pot Party",
-      time: "00:00",
-      date: "04/20/2019",
+      time: "12 AM PST",
+      date: "20 Apr 2019",
       venue: "Totem Forest",
       price: "",
-      admin: "High Bong"
+      admin: "High Bong",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      rating: 4,
     },
     priv: {
       id: 2,
@@ -216,7 +221,11 @@ export default [
       users: []
     },
     eventTags: {
-      host: [],
+      host: [
+        'cannabis',
+        '19+',
+        'party'
+      ],
       users: []
     },
     history: {

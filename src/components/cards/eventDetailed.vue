@@ -33,10 +33,22 @@
           <img src="../../assets/icons/location.png" alt="" class="location-icon">
           <p class="card-location-text">{{ eventInfo.pub.venue }}</p>
         </div>
-        <br />
+        <div class="card-body-rating">
+          <ul>
+            <li v-for="n in eventInfo.pub.rating">
+              <img src="../../assets/icons/star.png" alt="">
+            </li>
+            <li v-for="n in (5 - eventInfo.pub.rating)">
+              <img src="../../assets/icons/star-hollow.png" alt="">
+            </li>
+          </ul>
+        </div>
         <div class="card-body-description">
           <h5>OVERVIEW</h5>
-          <div class="">
+          <div class="card-body-time">
+            <p> {{ eventInfo.pub.date }}, {{ eventInfo.pub.time }}</p>
+          </div>
+          <div class="card-body-overview">
             <p v-if="snipped"> {{ eventInfo.pub.description | snippet }}</p>
             <p v-else> {{ eventInfo.pub.description }}</p>
           </div>

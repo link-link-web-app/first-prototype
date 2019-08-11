@@ -40,6 +40,13 @@ $map-size: 100%
   .popular-window__container
     background: $white
     border-radius: 0.5em
+    padding: 0 0 1em
+
+.badge-display-popular
+  span
+    margin-right: 0.5em
+    background: none
+    padding: 0 1em 0 0
 
 .search-window
   position: absolute
@@ -89,8 +96,10 @@ $map-size: 100%
     font-style: normal
     letter-spacing: -0.0375em
     margin-bottom: $large-card-font / 10
+    transition: all 0.4s ease
     &:hover
-      transform: scale(1.05)
+      color: $blue-grey
+      transition: all 0.2s ease
   .eventCard_location
     display: flex
     flex-direction: row
@@ -103,10 +112,20 @@ $map-size: 100%
       float: right
       margin: 0.25em 0 0 1em
       font-family: $montserrat
-      font-size: $font-size-small
+      font-size: $font-size-small * 0.9
       font-weight: 500
       line-height: $font-size-small
       color: $blue-grey
+  .eventCard_rating
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0.3em 0 0.5em
+      li
+        display: inline
+        margin: 0 0.2em 0 0
+        img
+          height: 1em
   .card-title--large
     font-size: $large-card-font
     font-weight: bold
@@ -126,8 +145,22 @@ $map-size: 100%
     padding-left: $card-width / 25
     padding-right: $card-width / 25
 
-// eventCard in the popup window
 
+// EVENT POPUP WINDOW
+
+// scrollbar
+::-webkit-scrollbar
+    height: 4px
+    width: 4px
+    background: none
+::-webkit-scrollbar-thumb
+    background: $grey
+    -webkit-border-radius: 1ex
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75)
+::-webkit-scrollbar-corner
+    background: none
+
+// event window tab styles
 .eventCard--detailed
   display: flex
   align-items: center
@@ -148,11 +181,15 @@ $map-size: 100%
       border-radius: 2%
       // can play around with filters here
     .card-body
+      border-radius: 2%
       font-family: $montserrat
       padding: 2rem
-      position: relative
-      top: -35%
+      position: absolute
+      // height: 59% so scrollbar doesn't extend through smooth border radius
+      height: 59%
+      top: 40%
       background-image: linear-gradient(rgba(0,0,0,0), black 70%)
+      overflow-y: auto
       .img-display
         text-align: right
         filter: contrast(100%)
@@ -168,8 +205,11 @@ $map-size: 100%
           vertical-align: middle
           text-align: center
           line-height: 2.5rem
+          opacity: 0.85
           &:hover
-            transform: scale(1.1)
+            opacity: 1
+            transform: scale(1.05)
+            transition: all 0.2s ease
       .card-title
         font-family: $josefin
         font-size: 2.250em
@@ -177,6 +217,17 @@ $map-size: 100%
         font-style: normal
         letter-spacing: -0.05em
         margin: 0.5em 0 0.25em
+      .card-body-rating
+        ul
+          list-style-type: none
+          padding: 0
+          margin: 0.3em 0 0.5em
+          li
+            display: inline
+            margin: 0 0.5em 0 0
+            img
+              height: 1em
+
       .card-location
         display: flex
         flex-direction: row
@@ -210,6 +261,9 @@ $map-size: 100%
           color: $blue
           font-weight: 600
           cursor: pointer
+        .card-body-time
+          p
+            font-weight: bold
 
 
 
@@ -254,3 +308,5 @@ $map-size: 100%
       font-weight: 600
       font-size: $font-size-normal
       letter-spacing: 0.2em
+
+// MEDIA QUERIES
