@@ -4,8 +4,8 @@ export default [
   {
     pub: {
       name: "DJ Khaled @ Celebrities",
-      time: "19:00,
-      date: "12/12/2019",
+      time: "19:00",
+      date: "12/21/2019",
       venue: "Celebrities Nightclub",
       price: "$15",
       admin: "Killy Bong",
@@ -103,7 +103,7 @@ export default [
     pub: {
       name: "Kelvin's Bday Bash",
       time: "23:00",
-      date: "11/9/2019",
+      date: "11/09/2019",
       venue: "Marine Drive",
       price: "",
       admin: "Kelvin Muk",
