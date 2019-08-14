@@ -4,8 +4,8 @@ export default [
   {
     pub: {
       name: "DJ Khaled @ Celebrities",
-      time: "7:00 PM PST",
-      date: "12 Dec 2019",
+      time: "19:00,
+      date: "12/12/2019",
       venue: "Celebrities Nightclub",
       price: "$15",
       admin: "Killy Bong",
@@ -102,8 +102,8 @@ export default [
   {
     pub: {
       name: "Kelvin's Bday Bash",
-      time: "11:00 PM PST",
-      date: "9 Sep 2019",
+      time: "23:00",
+      date: "11/9/2019",
       venue: "Marine Drive",
       price: "",
       admin: "Kelvin Muk",
@@ -155,8 +155,8 @@ export default [
   {
     pub: {
       name: "Alwin's Pot Party",
-      time: "12 AM PST",
-      date: "20 Apr 2019",
+      time: "00:00",
+      date: "04/20/2019",
       venue: "Totem Forest",
       price: "",
       admin: "High Bong",
