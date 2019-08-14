@@ -2,6 +2,21 @@
 
 $map-size: 100%
 
+// APPLIES TO ALL
+.badge
+  font-family: $montserrat
+  text-transform: uppercase
+  font-weight: 600
+  line-height: 1em
+  font-style: normal
+  color: $blue
+  font-size: 0.8em
+  margin: 0 1.5rem 0 0
+  padding: 0.3em 1em
+  user-select: none
+.badge-pill
+  border-radius: 0.625em
+  border-bottom-left-radius: 0
 .map-container
   position: absolute
   width: 100vw
@@ -25,6 +40,13 @@ $map-size: 100%
   .popular-window__container
     background: $white
     border-radius: 0.5em
+    padding: 0 0 1em
+
+.badge-display-popular
+  span
+    margin-right: 0.5em
+    background: none
+    padding: 0 1em 0 0
 
 .search-window
   position: absolute
@@ -62,15 +84,22 @@ $map-size: 100%
   .search-window__dropdown
     margin-top: 0
 
+// Cards
+
 .eventCard
   padding: $card-width / 25
   .card-title
+    cursor: pointer
     font-family: $josefin
-    font-size: $font-size-title * 0.9
+    font-size: $font-size-title * 0.8
     font-weight: bold
     font-style: normal
     letter-spacing: -0.0375em
     margin-bottom: $large-card-font / 10
+    transition: all 0.4s ease
+    &:hover
+      color: $blue-grey
+      transition: all 0.2s ease
   .eventCard_location
     display: flex
     flex-direction: row
@@ -83,10 +112,20 @@ $map-size: 100%
       float: right
       margin: 0.25em 0 0 1em
       font-family: $montserrat
-      font-size: $font-size-tiny
+      font-size: $font-size-small * 0.9
       font-weight: 500
       line-height: $font-size-small
-      color: $grey
+      color: $blue-grey
+  .eventCard_rating
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0.3em 0 0.5em
+      li
+        display: inline
+        margin: 0 0.2em 0 0
+        img
+          height: 1em
   .card-title--large
     font-size: $large-card-font
     font-weight: bold
@@ -101,10 +140,135 @@ $map-size: 100%
   .eventCard_text
     font-size: $small-card-font
   .card-body
-    padding-top: $large-card-font
+    padding-top: $small-card-font / 2
     padding-bottom: $large-card-font
     padding-left: $card-width / 25
     padding-right: $card-width / 25
+
+
+// EVENT POPUP WINDOW
+
+// scrollbar
+::-webkit-scrollbar
+    height: 4px
+    width: 4px
+    background: none
+::-webkit-scrollbar-thumb
+    background: $grey
+    -webkit-border-radius: 1ex
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75)
+::-webkit-scrollbar-corner
+    background: none
+
+// event window tab styles
+.eventCard--detailed
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  height: 100%
+  width: 100%
+  .card
+    width: 30vw
+    // width definitely needs responsiveness here
+    height: 80vh
+    border-radius: 2%
+    .card-img-top
+      object-fit: cover
+      object-position: 50% 0
+      min-height: 70%
+      filter: grayscale(20%) opacity(90%)
+      border-radius: 2%
+      // can play around with filters here
+    .card-body
+      border-radius: 2%
+      font-family: $montserrat
+      padding: 2rem
+      position: absolute
+      // height: 59% so scrollbar doesn't extend through smooth border radius
+      height: 59%
+      top: 40%
+      background-image: linear-gradient(rgba(0,0,0,0), black 70%)
+      overflow-y: auto
+      .img-display
+        text-align: right
+        filter: contrast(100%)
+        img, .img-add
+          cursor: pointer
+          object-fit: cover
+          width: 2.5rem
+          height: 2.5rem
+          margin: 0.3rem
+          border-radius: 20%
+          background: $blue
+          display: inline-block
+          vertical-align: middle
+          text-align: center
+          line-height: 2.5rem
+          opacity: 0.85
+          &:hover
+            opacity: 1
+            transform: scale(1.05)
+            transition: all 0.2s ease
+      .card-title
+        font-family: $josefin
+        font-size: 2.250em
+        font-weight: bold
+        font-style: normal
+        letter-spacing: -0.05em
+        margin: 0.5em 0 0.25em
+      .card-body-rating
+        ul
+          list-style-type: none
+          padding: 0
+          margin: 0.3em 0 0.5em
+          li
+            display: inline
+            margin: 0 0.5em 0 0
+            img
+              height: 1em
+
+      .card-location
+        display: flex
+        flex-direction: row
+        align-items: center
+        .location-icon
+          width: 15px
+          height: 18px
+          float: left
+        .card-location-text
+          float: right
+          margin: 0.125em 0 0 1em
+          font-family: $montserrat
+          font-size: $font-size-small
+          font-weight: 500
+          line-height: $font-size-small
+          color: $blue-grey
+      .card-body-description
+        font-family: $montserrat
+        h5
+          color: $blue-grey
+          font-size: $font-size-small
+          letter-spacing: 0.1em
+          font-weight: 600
+        p
+          color: $blue-grey
+          font-size: $font-size-small
+          line-height: $font-size-small * 2
+          font-weight: normal
+          margin-bottom: 0.5em
+        .card-body-description-rm
+          color: $blue
+          font-weight: 600
+          cursor: pointer
+        .card-body-time
+          p
+            font-weight: bold
+
+
+
+
+// Explore
 
 .explore-window
   bottom: 0
@@ -144,3 +308,5 @@ $map-size: 100%
       font-weight: 600
       font-size: $font-size-normal
       letter-spacing: 0.2em
+
+// MEDIA QUERIES
