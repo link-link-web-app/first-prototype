@@ -10,8 +10,6 @@
       :class    = "{modalOpen: modalOpen}"
       v-if      = "loaded"
       :events   = "events"
-      :wHeight  = "windowHeight"
-      :wWidth   = "windowWidth"
       @openCard = "openCard"
     />
 
