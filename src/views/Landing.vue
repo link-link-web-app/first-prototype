@@ -62,6 +62,8 @@
     },
     data() {
       return {
+        windowHeight: 0,
+        windowWidth: 0,
         events: events,
 
       // Boolean whether map is loaded
@@ -87,6 +89,14 @@
         this.modalFocus = id;
       }
     },
+
+    mounted() {
+      window.addEventListener('resize', () => {
+        this.windowHeight = window.innerHeight;
+        this.windowWidth = window.innerWidth;
+        console.log("nigga", window.innerWidth, " x ", window.innerHeight);
+      })
+    }
   };
 </script>
 

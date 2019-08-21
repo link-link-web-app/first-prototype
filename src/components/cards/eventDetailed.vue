@@ -63,6 +63,9 @@
         target="_blank"
         variant="primary"
       >Buy tickets!</b-button>
+
+      <hr />
+      
     </b-card>
   </div>
 </template>

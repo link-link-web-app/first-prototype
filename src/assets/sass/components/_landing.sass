@@ -10,8 +10,8 @@ $map-size: 100%
   line-height: 1em
   font-style: normal
   color: $blue
-  font-size: 0.8em
-  margin: 0 1.5rem 0 0
+  font-size: 0.5em
+  margin: 0 1.5em 0 0
   padding: 0.3em 1em
   user-select: none
 .badge-pill
@@ -36,11 +36,32 @@ $map-size: 100%
   position: absolute
   margin: $card-width / 8
   margin-top: $card-height / 10
-  width: $card-width + 1vw
+  width: $card-width + 5px
+  overflow: hidden
+  transition: all 0.5s
+  @media screen and (max-width: 700px)
+    display: none
+  @media screen and (max-width: 800px)
+    margin-top: 8em
+    margin-left: 10%
+  @media screen and (max-width: 800px) and (min-height: 800px)
+    margin-top: 10em
+    margin-left: 10%
   .popular-window__container
     background: $white
     border-radius: 0.5em
-    padding: 0 0 1em
+    .eventCard
+      max-height: 40vh
+      .eventCard_rating
+        @media screen and (max-height: 650px)
+          display: none
+        @media screen and (max-height: 750px) and (max-width: 800px)
+          display: none
+      .card-img-top
+        @media screen and (max-height: 550px)
+          display: none
+        @media screen and (max-height: 650px) and (max-width: 800px)
+          display: none
 
 .badge-display-popular
   span
@@ -57,19 +78,26 @@ $map-size: 100%
     display: flex
     flex-direction: row
     justify-content: center
-    margin-left: 35%
-    margin-right: 35%
-    margin-top: 3em
+    margin: 3em auto
     font-family: $montserrat
     font-size: 18px
+    height: 3em
+    width: 30vw
+    transition: width 0.5s
+    @media screen and (max-width: 850px)
+      width: 80%
+      font-size: 16px
+    @media screen and (max-width: 650px)
+      width: 80%
+      font-size: 14px
     input
       box-sizing: border-box
       border: none
       border-radius: 10px
-      height: 2.8em
+      height: 3em
       padding-left: 1em
       padding-right: 1em
-      width: 100%
+      width: 90%
       font-weight: 500
     input:focus, textarea:focus, select:focus
       outline: none
@@ -132,8 +160,6 @@ $map-size: 100%
     font-style: normal
     font-family: $montserrat
   .card
-    max-width: $card-width
-    max-height: $card-height
     border: none
   .card-img-top
     border-radius: 10px
@@ -141,7 +167,7 @@ $map-size: 100%
     font-size: $small-card-font
   .card-body
     padding-top: $small-card-font / 2
-    padding-bottom: $large-card-font
+    padding-bottom: $small-card-font / 2
     padding-left: $card-width / 25
     padding-right: $card-width / 25
 
@@ -173,6 +199,15 @@ $map-size: 100%
     // width definitely needs responsiveness here
     height: 80vh
     border-radius: 2%
+    @media screen and (max-width: 1200px)
+      width: 40vw
+    @media screen and (max-width: 1000px)
+      width: 50vw
+    @media screen and (max-width: 800px)
+      width: 60vw
+    @media screen and (max-width: 600px)
+      width: 80vw
+      height: 90vh
     .card-img-top
       object-fit: cover
       object-position: 50% 0
@@ -183,7 +218,7 @@ $map-size: 100%
     .card-body
       border-radius: 2%
       font-family: $montserrat
-      padding: 2rem
+      padding: 2em
       position: absolute
       // height: 59% so scrollbar doesn't extend through smooth border radius
       height: 59%
@@ -196,15 +231,15 @@ $map-size: 100%
         img, .img-add
           cursor: pointer
           object-fit: cover
-          width: 2.5rem
-          height: 2.5rem
-          margin: 0.3rem
+          width: 2.5em
+          height: 2.5em
+          margin: 0.3em
           border-radius: 20%
           background: $blue
           display: inline-block
           vertical-align: middle
           text-align: center
-          line-height: 2.5rem
+          line-height: 2.5em
           opacity: 0.85
           &:hover
             opacity: 1
@@ -272,27 +307,32 @@ $map-size: 100%
 
 .explore-window
   bottom: 0
+  font-size: 14px
   position: fixed
   width: 100%
   .explore-window__block
     height: 8vh
     width: 100%
     background: $white
+    @media screen and (max-height: 600px)
+      height: 10vh
   .explore-window__button
     bottom: 8vh
     display: flex
     flex-direction: column
     left: 50%
+    align-items: center
     position: absolute
     transform: translate(-50%, 50%)
-    transform-origin: bottom center
+    @media screen and (max-height: 600px)
+      bottom: 10vh
     .explore-window__button-icon
       width: 7em
       height: 7em
       cursor: pointer
       g circle
         fill: $blue
-        fill-opacity: 0.8
+        fill-opacity: 0.6
         transition: all 0.3s
       &:hover
         g circle
@@ -306,7 +346,7 @@ $map-size: 100%
       font-family: $montserrat
       margin: 0 auto 0.5em
       font-weight: 600
-      font-size: $font-size-normal
+      font-size: 1em
       letter-spacing: 0.2em
 
 // MEDIA QUERIES
