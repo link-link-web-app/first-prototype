@@ -316,7 +316,24 @@ $map-size: 100%
     width: 100%
     background: $white
     @media screen and (max-height: 600px)
-      height: 10vh
+      height: 8vh
+    ul
+      display: flex
+      flex-direction: row
+      list-style-type: none
+      padding: 0
+      width: 100%
+      justify-content: center
+      li
+        z-index: 2
+        img
+          width: 1.5em
+          margin: $icon-distance
+      li:nth-child(2)
+        margin-right: $icon-distance-special
+      li:nth-child(3)
+        margin-left: $icon-distance-special
+
   .explore-window__button
     bottom: 8vh
     display: flex

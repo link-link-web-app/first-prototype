@@ -2,6 +2,10 @@
   <div
     class   = "map-components-wrapper"
   >
+    <!-- <Mapbox
+      :class    = "{modalOpen: modalOpen}"
+      @mapLoad  = "loadMap"
+    /> -->
     <Map
       :class    = "{modalOpen: modalOpen}"
       @mapLoad  = "loadMap"
@@ -45,6 +49,7 @@
   import events from '@/assets/eventData'
 
   import Map from '@/components/Map'
+  import Mapbox from '@/components/Mapbox'
   import ExploreWindow from '@/components/ui/exploreWindow'
   import PopularEventsWindow from '@/components/ui/popularEventsWindow'
   import SearchBar from '@/components/ui/searchBar'
@@ -58,7 +63,8 @@
       PopularEventsWindow,
       SearchBar,
       EventDetailed,
-      Map
+      Map,
+      Mapbox
     },
     data() {
       return {
