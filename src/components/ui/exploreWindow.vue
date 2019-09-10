@@ -1,19 +1,22 @@
+<!-- Bottom tab on all the screens -->
 <template>
   <div class="explore-window">
     <div class="explore-window__button">
       <!-- <Explore /> -->
       <mq-layout mq="desktop">
+        <!-- "EXPLORE" text only shows up on desktop -->
         <h3 id="explore-text">EXPLORE</h3>
       </mq-layout>
       <Eclipse />
     </div>
     <div class="explore-window__block">
+      <!-- these icons only show up on mobile -->
       <mq-layout mq="mobile">
         <ul>
-          <li id="home-btn"><a href=""><img src="../../assets/icons/mobile-tab-icons/home.svg" alt=""></a></li>
-          <li id="discover-btn"><a href=""><img src="../../assets/icons/mobile-tab-icons/globe.svg" alt=""></a></li>
-          <li id="inbox-btn"><a href=""><img src="../../assets/icons/mobile-tab-icons/inbox.svg" alt=""></a></li>
-          <li id="profile-btn"><a href=""><img src="../../assets/icons/mobile-tab-icons/user.svg" alt=""></a></li>
+          <li id="home-btn"><router-link v-bind:to="''"><img src="../../assets/icons/mobile-tab-icons/home.svg" alt=""></router-link></li>
+          <li id="discover-btn"><router-link v-bind:to="''"><img src="../../assets/icons/mobile-tab-icons/globe.svg" alt=""></router-link></li>
+          <li id="inbox-btn"><router-link v-bind:to="''"><img src="../../assets/icons/mobile-tab-icons/inbox.svg" alt=""></router-link></li>
+          <li id="profile-btn"><router-link v-bind:to="''"><img src="../../assets/icons/mobile-tab-icons/user.svg" alt=""></router-link></li>
         </ul>
       </mq-layout>
     </div>
