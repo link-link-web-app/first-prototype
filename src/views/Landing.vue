@@ -2,6 +2,10 @@
   <div
     class   = "map-components-wrapper"
   >
+    <!-- <Mapbox
+      :class    = "{modalOpen: modalOpen}"
+      @mapLoad  = "loadMap"
+    /> -->
     <Map
       :class    = "{modalOpen: modalOpen}"
       @mapLoad  = "loadMap"
@@ -45,6 +49,7 @@
   import events from '@/assets/eventData'
 
   import Map from '@/components/Map'
+  import Mapbox from '@/components/Mapbox'
   import ExploreWindow from '@/components/ui/exploreWindow'
   import PopularEventsWindow from '@/components/ui/popularEventsWindow'
   import SearchBar from '@/components/ui/searchBar'
@@ -58,10 +63,13 @@
       PopularEventsWindow,
       SearchBar,
       EventDetailed,
-      Map
+      Map,
+      Mapbox
     },
     data() {
       return {
+        windowHeight: 0,
+        windowWidth: 0,
         events: events,
 
       // Boolean whether map is loaded
@@ -87,6 +95,14 @@
         this.modalFocus = id;
       }
     },
+
+    mounted() {
+      window.addEventListener('resize', () => {
+        this.windowHeight = window.innerHeight;
+        this.windowWidth = window.innerWidth;
+        console.log("nigga", window.innerWidth, " x ", window.innerHeight);
+      })
+    }
   };
 </script>
 

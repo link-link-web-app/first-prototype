@@ -1,5 +1,5 @@
 <template>
-  <div class="eventCard mb-2">
+  <div class="eventCard">
     <b-card
       :img-src="eventInfo.mediaLink.cover"
       :img-alt="eventInfo.mediaLink.host[0]"
@@ -21,16 +21,16 @@
         <div class="eventCard_text">
           {{ eventInfo.pub.venue }}
         </div> -->
-        <div class="eventCard_location">
+        <div class  = "eventCard_location">
           <img src="../../assets/icons/location.png" alt="" class="location-icon">
           <p class="eventCard_locationText">{{ eventInfo.pub.venue }}</p>
         </div>
-        <div class="eventCard_rating">
+        <div class  = "eventCard_rating">
           <ul>
             <li v-for="n in eventInfo.pub.rating">
               <img src="../../assets/icons/star.png" alt="">
             </li>
-            <li v-for="n in (5 - eventInfo.pub.rating)">
+            <li v-for = "n in (5 - eventInfo.pub.rating)">
               <img src="../../assets/icons/star-hollow.png" alt="">
             </li>
           </ul>
@@ -45,7 +45,7 @@
   export default {
     name: "eventSimpleDisplay",
     props: {
-      eventInfo: Object
+      eventInfo: Object,
     },
     methods: {
       openCard() {
