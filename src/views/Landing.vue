@@ -44,7 +44,7 @@
   // temporary event data
   import events from '@/assets/eventData'
 
-  import Map from '@/components/Map'
+  import Map from '@/components/MapBox'
   import ExploreWindow from '@/components/ui/exploreWindow'
   import PopularEventsWindow from '@/components/ui/popularEventsWindow'
   import SearchBar from '@/components/ui/searchBar'

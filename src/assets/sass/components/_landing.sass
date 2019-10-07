@@ -17,12 +17,16 @@ $map-size: 100%
 .badge-pill
   border-radius: 0.625em
   border-bottom-left-radius: 0
-.map-container
+
+// google maps and mapbox
+.map-container, .map-components-wrapper
   position: absolute
   width: 100vw
   height: $map-size
   min-height: $card-height * 2
   top: 100% - $map-size
+.mgl-map-wrapper
+  position: absolute !important
 
 .title-container
   position: absolute
