@@ -9,17 +9,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/sass/index.sass'
 
 // Functional Dependencies
-import * as VueGoogleMaps from "vue2-google-maps"
 import router from './router'
 import store from './store'
-
-// Load Google Maps API
-Vue.use( VueGoogleMaps, {
-  load: {
-    key: process.env.VUE_APP_GOOGLE_MAPS_API_KEY,
-    libraries: "places"   // Allows autocomplete for "places" when searching
-  }
-})
 
 // VueMq
 Vue.use(VueMq, {

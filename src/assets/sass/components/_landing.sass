@@ -17,12 +17,17 @@ $map-size: 100%
 .badge-pill
   border-radius: 0.75em
   border-bottom-left-radius: 0
-.map-container
+
+// google maps and mapbox
+.map-container, .map-components-wrapper
   position: absolute
   width: 100vw
   height: $map-size
   min-height: $card-height * 2
   top: 100% - $map-size
+
+.mgl-map-wrapper
+  position: absolute !important
 
 .title-container
   position: absolute
@@ -92,14 +97,16 @@ $map-size: 100%
       width: 80%
       font-size: 14px
     input
+      background: white
       box-sizing: border-box
       border: none
       border-radius: 10px
+      color: black
+      font-weight: 600
       height: 3em
       padding-left: 1em
       padding-right: 1em
       width: 90%
-      font-weight: 600
     input:focus, textarea:focus, select:focus
       outline: none
     .search-container
