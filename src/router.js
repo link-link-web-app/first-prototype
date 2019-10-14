@@ -6,14 +6,19 @@ import SignUp   from  './views/SignUp.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const DEFAULT_TITLE = 'LINK LINK Web Application'
+
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
       name: 'landing',
-      component: Landing
+      component: Landing,
+      meta: {
+      title: 'Dashboard',
+      }
     },
     {
       path: '/signin',
@@ -27,3 +32,9 @@ export default new Router({
     }
   ]
 })
+
+router.afterEach((to, from) => {
+  document.title = to.meta.title || DEFAULT_TITLE;
+})
+
+export default router

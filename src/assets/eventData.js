@@ -15,6 +15,7 @@ export default [
     priv: {
       id: 0,
       adminId: 1,
+      coordinates: [-123.129042, 49.278767],
       dateCreated: "07/29/2019",
       lastUpdate: "07/29/2019",
       type: PUBLIC
@@ -113,6 +114,7 @@ export default [
     priv: {
       id: 1,
       adminId: 19356,
+      coordinates: [-123.255368, 49.261570],
       dateCreated: "07/29/2019",
       lastUpdate: "07/29/2019",
       type: PRIVATE
@@ -166,6 +168,7 @@ export default [
     priv: {
       id: 2,
       adminId: 823132,
+      coordinates: [-123.221412, 49.258983],
       dateCreated: "07/29/2019",
       lastUpdate: "07/29/2019",
       type: PUBLIC
