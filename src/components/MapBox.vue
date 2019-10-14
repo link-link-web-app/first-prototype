@@ -22,7 +22,7 @@
 </template>
 
 <script>
-
+  // import street themed style.json 
   import MapboxStyle from "../assets/mapbox/style.json"
 
   import Mapbox from "mapbox-gl"
