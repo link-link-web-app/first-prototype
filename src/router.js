@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Landing  from  './views/Landing.vue'
-import SignIn   from  './views/SignIn.vue'
-import SignUp   from  './views/SignUp.vue'
+import Landing  from  './windows/Landing.vue'
+import SignIn   from  './windows/SignIn.vue'
+import SignUp   from  './windows/SignUp.vue'
 
 Vue.use(Router)
 

@@ -6,7 +6,7 @@ import VueMq from 'vue-mq'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import './assets/sass/index.sass'
+import './assets/sass/main.sass'
 
 // Functional Dependencies
 import router from './router'
