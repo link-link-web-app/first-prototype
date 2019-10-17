@@ -22,12 +22,12 @@
 </template>
 
 <script>
-  // import street themed style.json 
-  import MapboxStyle from "../assets/mapbox/style.json"
+  // import street themed style.json
+  import MapboxStyle from "@/assets/js/mapbox/style.json"
 
   import Mapbox from "mapbox-gl"
   import { MglMap, MglMarker, MglPopup } from "vue-mapbox"
-  import eventData from '../assets/eventData.js'
+  import eventData from '@/assets/js/eventData.js'
 
   export default {
     components: {
@@ -36,7 +36,7 @@
       MglPopup,
       eventData
     },
-    name: "Landing",
+    name: "Map",
     data() {
       return {
       // MAP SETTINGS (move to JSON?)

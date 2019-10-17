@@ -43,7 +43,7 @@
 
 <script>
   export default {
-    name: "eventSimpleDisplay",
+    name: "EventCard",
     props: {
       eventInfo: Object,
     },
