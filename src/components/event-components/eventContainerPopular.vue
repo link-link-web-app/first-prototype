@@ -1,6 +1,6 @@
 <template>
   <div class= "popular-window">
-    <div class="eventCard "><span class="card-title--large">&nbspEvents Nearby</span></div>
+    <div class="eventCard "><span class="card-title--large">&nbsp;Events Nearby</span></div>
     <div class="popular-window__container">
       <EventCard
         :eventInfo    = "events[0]"
@@ -15,9 +15,9 @@
 </template>
 
 <script>
-  import EventCard from "@/components/cards/eventDisplay"
+  import EventCard from "@/components/event-components/eventCard"
   export default {
-    name: "popularEventsWindow",
+    name: "EventContainerPopular",
     components: {
       EventCard
     },

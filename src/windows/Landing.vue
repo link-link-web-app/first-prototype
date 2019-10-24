@@ -6,7 +6,7 @@
       :class    = "{modalOpen: modalOpen}"
       @mapLoad  = "loadMap"
     />
-    <PopularEventsWindow
+    <EventContainerPopular
       :class    = "{modalOpen: modalOpen}"
       v-if      = "loaded"
       :events   = "events"
@@ -18,7 +18,7 @@
       v-if      = "loaded"
     />
 
-    <ExploreWindow
+    <ExploreBar
       :class    = "{modalOpen: modalOpen}"
       v-if    = "loaded"
     />
@@ -31,7 +31,7 @@
         class   = "background-blur"
         @click  = "triggerModal"
       ></div>
-      <EventDetailed
+      <EventCardPopup
       :eventInfo  = "events[modalFocus]"
       @trigger    = "triggerModal"
       />
@@ -42,22 +42,22 @@
 
 <script>
   // temporary event data
-  import events from '@/assets/eventData'
+  import events from '@/assets/js/eventData'
 
-  import Map from '@/components/MapBox'
-  import ExploreWindow from '@/components/ui/exploreWindow'
-  import PopularEventsWindow from '@/components/ui/popularEventsWindow'
-  import SearchBar from '@/components/ui/searchBar'
+  import Map from '@/components/map/MapBox'
+  import ExploreBar from '@/components/ui-elements/exploreBar'
+  import EventContainerPopular from '@/components/event-components/eventContainerPopular'
+  import SearchBar from '@/components/ui-elements/searchBar'
 
-  import EventDetailed from '@/components/cards/eventDetailed'
+  import EventCardPopup from '@/components/event-components/eventCardPopup'
 
   export default {
     name: 'Landing',
     components: {
-      ExploreWindow,
-      PopularEventsWindow,
+      ExploreBar,
+      EventContainerPopular,
       SearchBar,
-      EventDetailed,
+      EventCardPopup,
       Map
     },
     data() {

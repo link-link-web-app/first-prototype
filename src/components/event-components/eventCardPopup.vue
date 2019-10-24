@@ -65,7 +65,7 @@
       >Buy tickets!</b-button>
 
       <hr />
-      
+
     </b-card>
   </div>
 </template>
@@ -78,7 +78,7 @@
       }
     },
 
-    name: "eventDetailedDisplay",
+    name: "EventCardPopup",
     props: {
       eventInfo: Object
     },
