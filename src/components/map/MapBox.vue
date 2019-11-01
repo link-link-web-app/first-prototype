@@ -8,9 +8,7 @@
     :zoom         = "defaultMapStyle.zoom"
     @load         = "onMapLoad"
   >
-    <MglMarker  v-for         = "m,i in eventData"
-                :coordinates  = "eventData[i].priv.coordinates"
-    >
+    <MglMarker  v-for = "m,i in eventData" :coordinates  = "eventData[i].priv.coordinates">
       <MglPopup>
         <div>
           <div>{{eventData[i].pub.name}}</div>
@@ -25,9 +23,12 @@
   // import street themed style.json
   import MapboxStyle from "@/assets/js/mapbox/style.json"
 
+  // import events
+  import eventData from '@/assets/js/eventData.js'
+
+
   import Mapbox from "mapbox-gl"
   import { MglMap, MglMarker, MglPopup } from "vue-mapbox"
-  import eventData from '@/assets/js/eventData.js'
 
   export default {
     components: {
