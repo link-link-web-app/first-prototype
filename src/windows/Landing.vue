@@ -94,7 +94,6 @@
       window.addEventListener('resize', () => {
         this.windowHeight = window.innerHeight;
         this.windowWidth = window.innerWidth;
-        console.log("nigga", window.innerWidth, " x ", window.innerHeight);
       })
     }
   };
