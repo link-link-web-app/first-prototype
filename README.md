@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Fork this repository
 
-2. Clone the remote epository into a local environment
+2. Clone the remote repository into a local environment
 
 3. [Install all dependencies](#dependency)
 
