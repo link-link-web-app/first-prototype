@@ -4,6 +4,9 @@ import Discover  from  './windows/Discover.vue'
 import SignIn   from  './windows/SignIn.vue'
 import SignUp   from  './windows/SignUp.vue'
 
+// for testing purposes
+import Events from './components/test-components/Events.vue'
+
 Vue.use(Router)
 
 const DEFAULT_TITLE = 'LINK LINK Web Application'
@@ -29,6 +32,12 @@ const router = new Router({
       path: '/signup',
       name: 'Sign Up',
       component: SignUp
+    },
+    // for testing purposes
+    {
+      path: '/events',
+      name: 'Events',
+      component: Events
     }
   ]
 })
