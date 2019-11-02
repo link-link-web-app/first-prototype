@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Landing  from  './windows/Landing.vue'
+import Discover  from  './windows/Discover.vue'
 import SignIn   from  './windows/SignIn.vue'
 import SignUp   from  './windows/SignUp.vue'
 
@@ -14,8 +14,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'landing',
-      component: Landing,
+      name: 'discover',
+      component: Discover,
       meta: {
       title: 'Dashboard',
       }
