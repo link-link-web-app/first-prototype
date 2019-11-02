@@ -56,7 +56,7 @@ const eventSchema = new Schema({
     },
     dateCreated: Date,
     lastUpdated: Date,
-    type: String
+    eventPrivacy: String
   },
   public: {
     name: String,
