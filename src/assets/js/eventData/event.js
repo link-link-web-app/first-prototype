@@ -38,6 +38,10 @@ const eventSettingsSchema = new Schema({
     coverImg: imgSchema,
     hostImg: [imgSchema],
     userImg: [imgSchema]
+  },
+  tags: {
+    hostTags: [String],
+    userTags: [String]
   }
 })
 
@@ -62,9 +66,12 @@ const eventSchema = new Schema({
     price: String,
     host: String, // admin
     description: String,
-    rating: Number // type: float
-  },
-  attendance: {
-    membersAccess: {}
+    rating: Number, // type: float
+    eventSettings: eventSettingsSchema,
+    attendance: {
+      membersAccess: {
+        list: [inviteeSchema]
+      }
+    }
   }
 })
