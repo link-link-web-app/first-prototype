@@ -64,12 +64,12 @@
       return {
         windowHeight: 0,
         windowWidth: 0,
-        events: events,
+        events: events, // to be passed down as props to child components
 
-      // Boolean whether map is loaded
+        // Boolean whether map is loaded
         loaded: false,
 
-      // Map state
+        // Map state
         modalOpen: false,
         modalFocus: 0,
 

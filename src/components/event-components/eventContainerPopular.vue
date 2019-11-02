@@ -26,7 +26,7 @@
       }
     },
     props: {
-      events: Array,
+      events: Array, // from Discover.vue
     },
     methods: {
       openCard(id) {
