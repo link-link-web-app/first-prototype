@@ -69,9 +69,7 @@ const eventSchema = new Schema({
     rating: Number, // type: float
     eventSettings: eventSettingsSchema,
     attendance: {
-      membersAccess: {
-        list: [inviteeSchema]
-      }
+      list: [inviteeSchema]
     }
   }
 })
