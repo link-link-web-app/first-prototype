@@ -5,7 +5,7 @@ import SignIn   from  './windows/SignIn.vue'
 import SignUp   from  './windows/SignUp.vue'
 
 // for testing purposes
-import Events from './components/test-components/Events.vue'
+import TestEvents from './components/test-components/TestEvents.vue'
 
 Vue.use(Router)
 
@@ -35,9 +35,9 @@ const router = new Router({
     },
     // for testing purposes
     {
-      path: '/events',
+      path: '/testevents',
       name: 'Events',
-      component: Events
+      component: TestEvents
     }
   ]
 })

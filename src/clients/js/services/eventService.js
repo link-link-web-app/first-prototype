@@ -1,7 +1,7 @@
 import Api from './api'
 
 export default {
-  fetchPosts(){
+  fetchEvents(){
     return Api.get('events')
   }
 }
