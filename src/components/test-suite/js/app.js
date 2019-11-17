@@ -32,6 +32,7 @@ app.get("/posts", (req, res) => {
   }).sort({ id: -1 });
 });
 
+// post request
 app.post("/posts", (req, res) => {
   var db = req.db;
   var newTitle = req.body.title;

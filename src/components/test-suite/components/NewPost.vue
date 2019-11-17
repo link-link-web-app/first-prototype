@@ -32,14 +32,17 @@ export default {
     };
   },
   methods: {
-    async addPost() {
+    async addPost () {
       await PostService.addPost({
         title: this.title,
         description: this.description
-      });
-      // pushes "Posts" to the router history stack
-      this.$router.push({ path: '/posts' });
-      // this.$router.push({ name: "Posts" });
+      })
+      this.$swal(
+        'Great!',
+        `Your post has been added!`,
+        'success'
+      )
+      this.$router.push({ name: 'Posts' })
     }
   }
 };
