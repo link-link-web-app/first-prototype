@@ -53,9 +53,22 @@ export default {
       this.posts = response.data.posts;
     },
     async deletePost(id) {
-      await PostService.deletePost(id);
-      this.getPosts();
-      this.$router.push({ name: "Posts" });
+      // await PostService.deletePost(id);
+      // this.getPosts();
+      // this.$router.push({ name: "Posts" });
+      const $this = this;
+      $this.$swal({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(() => {
+        PostService.deletePost(id);
+        $this.$router.go({ path: "/" })
+      })
     }
   }
 };
