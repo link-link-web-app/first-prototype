@@ -5,42 +5,55 @@ import SignIn   from  './windows/SignIn.vue'
 import SignUp   from  './windows/SignUp.vue'
 
 // for testing purposes
-import TestEvents from './components/test-components/TestEvents.vue'
+import Posts from './components/test-suite/components/Posts.vue'
+import NewPost from './components/test-suite/components/NewPost.vue'
+import EditPost from './components/test-suite/components/EditPost.vue'
 
+//
 Vue.use(Router)
 
 const DEFAULT_TITLE = 'LINK LINK Web Application'
 
 const router = new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'discover',
+      path: "/",
+      name: "discover",
       component: Discover,
       meta: {
-      title: 'Dashboard',
+        title: "Dashboard"
       }
     },
     {
-      path: '/signin',
-      name: 'Sign In',
+      path: "/signin",
+      name: "Sign In",
       component: SignIn
     },
     {
-      path: '/signup',
-      name: 'Sign Up',
+      path: "/signup",
+      name: "Sign Up",
       component: SignUp
     },
     // for testing purposes
     {
-      path: '/testevents',
-      name: 'Events',
-      component: TestEvents
+      path: "/posts",
+      name: "Posts",
+      component: Posts
+    },
+    {
+      path: "/posts/new",
+      name: "NewPost", // don't mess up names again jeez
+      component: NewPost
+    },
+    {
+      path: "/posts/:id",
+      name: "EditPost",
+      component: EditPost
     }
   ]
-})
+});
 
 router.afterEach((to, from) => {
   document.title = to.meta.title || DEFAULT_TITLE;
