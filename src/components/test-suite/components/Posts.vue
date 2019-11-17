@@ -3,7 +3,7 @@
     <h1>Posts</h1>
     <div v-if="posts.length > 0" class="table-wrap">
       <div>
-        <router-link v-bind:to="{ name: 'NewPost' }">Add Post</router-link>
+        <router-link v-bind:to="{ name: 'NewPost' }" class="add-post-btn">Add Post</router-link>
       </div>
       <table class="inner-table">
         <tr>
@@ -65,8 +65,8 @@ export default {
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Yes, delete it!'
-      }).then(() => {
-        PostService.deletePost(id);
+      }).then((result) => {
+        if (result.value) PostService.deletePost(id);
         $this.$router.go({ path: "/" })
       })
     }
@@ -74,8 +74,17 @@ export default {
 };
 </script>
 <style type="text/css">
-.posts {
-  padding: 0 auto;
+.add-post-btn {
+  font-size: 20px;
+}
+.posts h1 {
+  margin: 0 auto;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  font-size: 48px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .table-wrap {
   width: 50%;

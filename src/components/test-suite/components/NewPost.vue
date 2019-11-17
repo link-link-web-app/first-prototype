@@ -57,7 +57,8 @@ export default {
   font-size: 12px;
 }
 .form div {
-  margin: 20px;
+  margin: 20px auto;
+  text-align: center;
 }
 .app-post-btn {
   background: #4d7ef7;

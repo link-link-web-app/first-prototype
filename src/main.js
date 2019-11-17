@@ -22,12 +22,12 @@ import store from './store'
 
 // VueMq
 Vue.use(VueMq, {
-	breakpoints: {
-	  mobile: 600,
-	  // tablet: 900,
-	  // laptop: 1250,
-	  desktop: Infinity,
-	}
+		breakpoints: {
+			mobile: 600,
+			// tablet: 900,
+			// laptop: 1250,
+			desktop: Infinity,
+		}
   })
 
 // Load Vue Bootstrap
