@@ -28,12 +28,12 @@
 </template>
 
 <script>
-  import Explore from '@/assets/icons/explore-text'
+  // import Explore from '@/assets/icons/explore-text'
   import Eclipse from '@/assets/icons/explore-eclipse'
 
   export default {
     components: {
-      Explore,
+      // Explore,
       Eclipse
     },
     props: {

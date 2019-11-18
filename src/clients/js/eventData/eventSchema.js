@@ -56,7 +56,7 @@ const eventSchema = new Schema({
     },
     dateCreated: Date,
     lastUpdated: Date,
-    type: String
+    eventPrivacy: String
   },
   public: {
     name: String,
@@ -69,9 +69,10 @@ const eventSchema = new Schema({
     rating: Number, // type: float
     eventSettings: eventSettingsSchema,
     attendance: {
-      membersAccess: {
-        list: [inviteeSchema]
-      }
+      list: [inviteeSchema]
     }
   }
 })
+
+const Events = mongoose.model('events', eventSchema);
+module.exports = Events;

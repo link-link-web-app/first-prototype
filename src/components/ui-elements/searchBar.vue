@@ -8,7 +8,7 @@
         ref="autocomplete"
         v-model="searchQuery"
         placeholder="Search events, locations, dates"
-      ></input>
+      >
     </div>
     <!-- <div class="search-window__dropdown">
       <div>{{ searchQuery }}</div>
