@@ -10,7 +10,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "bootstrap-vue": "^2.0.0-rc.27",
+    "bootstrap-vue": "^2.1.0",
     "core-js": "^2.6.5",
     "express": "^4.17.1",
     "mapbox-gl": "^1.4.1",
