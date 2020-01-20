@@ -1,4 +1,6 @@
 # llwa-first-prototype
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3b398591-ef2c-400a-ade2-f02e6f27c42f/deploy-status)](https://app.netlify.com/sites/link-link-web-app/deploys)
+
 
 The first prototype of the LINK LINK Web App, an event-tracking web application created as part of a personal project for a group of students based in Vancouver. The team organization page can be viewed at:
 
@@ -10,15 +12,11 @@ https://github.com/link-link-webapp
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-1. Fork this repository
+1. Clone the remote repository into a local environment
 
-2. Clone the remote repository into a local environment
+2. [Install all dependencies](#dependency)
 
-3. [Install all dependencies](#dependency)
-
-4. Ensure the Google Maps API is functional
-
-5. Deploy app on localhost
+3. Run both vue application and express backend
 
 Vue provides a user interface (BETA) that allows deploying the project on an optionally specified port on *localhost:PORT_NUM*. The Vue UI can be accessed by running the command below on the project root:
 
@@ -40,11 +38,12 @@ npm run serve
 npm run build
 ```
 
-#### Run and lint files
+#### Run node API
 
 ```
-npm run lint
+npm start
 ```
+
 
 ### Running the tests
 
@@ -63,7 +62,6 @@ Instructions on installing and using JEST can be found on the [original document
 ## Built With
 
 * [Vue.js](https://vuejs.org/v2/guide/) - The web framework used
-* [Google Cloud Platform](https://cloud.google.com/gcp/getting-started/) - Map API
 
 ### Production Dependencies
 
@@ -76,8 +74,6 @@ The project currently requires the following packages as dependencies in order t
 > [vuex](https://vuex.vuejs.org/guide/) (storage management)
 
 > [bootstrap-vue](https://bootstrap-vue.js.org/docs) (display)
-
-> [vue2-google-maps](https://www.npmjs.com/package/vue2-google-maps) (Google Maps Vue API)
 
 ### Additional Dependencies
 
@@ -93,9 +89,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 - - - -
 
-## Google Cloud Platform
-
-Currently, as part of the development stage, the app is running using a public API Key with specific quotas set to prevent too many requests being made to the Google API Services allowed. Therefore, the dotenv (~/.env) environmental variables file is committed into this repository to support ease of contribution by members of the team. In order to obtain a new private API key, feel free to follow the instructions posted on the Original [Google Cloud Platform Documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
+## MapBox
 
 - - - -
 
@@ -103,17 +97,11 @@ Currently, as part of the development stage, the app is running using a public A
 
 Contributions are only accepted from members of the [team](https://github.com/link-link-webapp). Instructions to start contributing are as follows:
 
-1. Fork this repository
-2. Clone the remote repository into a local environment
-3. Make the appropriate edits and additions
-4. Make a pull request with a detailed commit message of what additions were made
+1. Clone the remote repository into a local environment
+2. Make the appropriate edits and additions
+3. Make a pull request with a detailed commit message of what additions were made
 
 --> Pull requests will be accepted after being reviewed and after unit tests are conducted
 
 ## Authors
 
-
-## License
-
-
-## Acknowledgments
