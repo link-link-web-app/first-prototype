@@ -1,4 +1,4 @@
-import { PRIVATE, PUBLIC, GOING, INTERESTED } from '@/assets/js/constants'
+import { PRIVATE, PUBLIC, GOING, INTERESTED } from '@/assets/js/constants/constants'
 
 export default [
   {

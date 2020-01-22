@@ -35,10 +35,10 @@
         </div>
         <div class="card-body-rating">
           <ul>
-            <li v-for="n in eventInfo.pub.rating">
+            <li v-for="n in eventInfo.pub.rating" v-bind:key="n.id">
               <img src="../../assets/icons/star.png" alt="">
             </li>
-            <li v-for="n in (5 - eventInfo.pub.rating)">
+            <li v-for="n in (5 - eventInfo.pub.rating)" v-bind:key="n.id">
               <img src="../../assets/icons/star-hollow.png" alt="">
             </li>
           </ul>
